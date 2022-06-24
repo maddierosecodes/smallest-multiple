@@ -1,10 +1,11 @@
-const { findSmallestMultiple } = require('./main.js')
+const { findSmallestMultiple } = require('./main.js');
 
 describe('findSmallestMultiple', () => {
-	it('returns a number', () => {
-		expect(typeof findSmallestMultiple()).toBe('number')
-	});
-	it('returns 0 when upper limit of divisors is 0', () => {
-		expect(findSmallestMultiple(0)).toBe(0);
-	});
+  it('returns the same value when upper limit of divisors is 0-2', () => {
+    expect(findSmallestMultiple(1)).toBe(1);
+    expect(findSmallestMultiple(2)).toBe(2);
+  });
+  it('returns the smallest multiple (6) when upper limit of divisors is 3', () => {
+    expect(findSmallestMultiple(3)).toBe(6);
+  });
 });
